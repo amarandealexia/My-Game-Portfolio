@@ -208,9 +208,10 @@ document.querySelectorAll('.buttonBox').forEach((img, index) => {
     secretBtn.textContent = 'MaGic in youR Eyes';
     secretBtn.classList.add('secret-hat-btn');
 
-    secretBtn.addEventListener('click', () => {
-      document.getElementById('hat2').style.backgroundImage = 'url("images/hat7.png")';
-    });
+   secretBtn.addEventListener('click', () => {
+  document.getElementById('hat2').style.backgroundImage = 'url("/images/hat7.png")';
+});
+
 
     img.insertAdjacentElement('afterend', secretBtn);
   });
@@ -218,39 +219,16 @@ document.querySelectorAll('.buttonBox').forEach((img, index) => {
 //222 lines <3
 
 const tarotCards = [
-  {
-    img: './tarot/moon.jpg',
-    message: '🌙 The Moon — Trust your intuition, even when the path is unclear.'
-  },
-  {
-    img: './tarot/lovers.jpg',
-    message: '💘 The Lovers — A choice of the heart is blooming within you.'
-  },
-  {
-    img: './tarot/star.jpg',
-    message: '✨ The Star — Hope is not lost. A quiet miracle is unfolding.'
-  },
-  {
-    img: './tarot/magician.jpg',
-    message: '🪄 The Magician — You already have the tools. Begin your spell.'
-  },
-  {
-    img: './tarot/empress.jpg',
-    message: '🌺 The Empress — Let yourself be lush, abundant, and unapologetically soft.'
-  },
-  {
-    img: './tarot/fool.jpg',
-    message: '🎒 The Fool — Leap! The universe loves a little chaos and courage.'
-  },
-  {
-    img: './tarot/temperance.jpg',
-    message: '🫖 Temperance — Stir slowly. Balance will return with patience.'
-  },
-  {
-    img: './tarot/tower.jpg',
-    message: '⚡ The Tower — Sometimes collapse clears the sky for starlight.'
-  }
+  { img: '/tarot/moon.jpg', message: '🌙 The Moon — Trust your intuition, even when the path is unclear.' },
+  { img: '/tarot/lovers.jpg', message: '💘 The Lovers — A choice of the heart is blooming within you.' },
+  { img: '/tarot/star.jpg', message: '✨ The Star — Hope is not lost. A quiet miracle is unfolding.' },
+  { img: '/tarot/magician.jpg', message: '🪄 The Magician — You already have the tools. Begin your spell.' },
+  { img: '/tarot/empress.jpg', message: '🌺 The Empress — Let yourself be lush, abundant, and unapologetically soft.' },
+  { img: '/tarot/fool.jpg', message: '🎒 The Fool — Leap! The universe loves a little chaos and courage.' },
+  { img: '/tarot/temperance.jpg', message: '🫖 Temperance — Stir slowly. Balance will return with patience.' },
+  { img: '/tarot/tower.jpg', message: '⚡ The Tower — Sometimes collapse clears the sky for starlight.' }
 ];
+
 
 
 function drawTarot() {
@@ -264,4 +242,5 @@ function drawTarot() {
   image.src = card.img;
   message.textContent = card.message;
 }
+
 
