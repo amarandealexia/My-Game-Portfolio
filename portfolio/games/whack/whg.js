@@ -25,7 +25,7 @@ function drawBox() {
 }
 
 function clickHandler(e) {
-    if (!gameRunning) return; // 🚫 stop when game ends
+    if (!gameRunning) return;
 
     const rect = canvas.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
@@ -58,7 +58,7 @@ const countdown = setInterval(() => {
 
     if (timeLeft <= 0) {
         clearInterval(countdown);
-        gameRunning = false; // 🛑 stop game
+        gameRunning = false; 
         timerElement.textContent = "Time's up!";
 
         if (score > highs) {
@@ -68,4 +68,5 @@ const countdown = setInterval(() => {
             alert("Your final score is: " + score);
         }
     }
-}, 1000); // ⏱️ always 1 second
+}, 1000);
+
