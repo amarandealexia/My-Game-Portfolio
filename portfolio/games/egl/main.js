@@ -39,11 +39,7 @@ function nextdress() {
 
 function updateDress() {
   let dress = document.querySelector("#dress");
-  dress.className = `doll-layer dress${state.dress}`;
-  const audio = new Audio('meow.mp3');
-  audio.volume = 0.7;
-  audio.currentTime = 0;
-  audio.play();
+  dress.style.backgroundImage = `url("/images/dress${state.dress}.png")`;
 }
 
 function nextshoes() {
@@ -268,3 +264,4 @@ function drawTarot() {
   image.src = card.img;
   message.textContent = card.message;
 }
+
