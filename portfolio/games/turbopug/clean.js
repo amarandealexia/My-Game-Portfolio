@@ -38,7 +38,7 @@ function resetPlatforms() {
 function spawnPlatform() {
   const w = 60 + Math.random() * 100;
   const gap = 120 + Math.random() * 120;
-  const yOffset = Math.random() * 50 - 25; // random vertical variation
+  const yOffset = Math.random() * 50 - 25; 
 
   platforms.push({
     x: lastX + gap,
@@ -71,18 +71,18 @@ document.addEventListener('keydown', e => {
 function update() {
   if (!running) return;
 
-  // Physics
+  
   player.vy += gravity;
   player.y += player.vy;
 
-  // Move platforms
+
   platforms.forEach(p => p.x -= speed);
   platforms = platforms.filter(p => p.x + p.w > 0);
 
-  // Spawn new platforms
+ 
   if (platforms[platforms.length - 1].x < canvas.width) spawnPlatform();
 
-  // Collision
+
   player.grounded = false;
   platforms.forEach(p => {
     if (
@@ -98,7 +98,7 @@ function update() {
     }
   });
 
-  // Player fell
+
   if (player.y > GAME_HEIGHT + 100) {
     running = false;
     best = Math.max(best, Math.floor(score));
@@ -106,7 +106,7 @@ function update() {
     return;
   }
 
-  // Score
+
   score += speed * 0.05;
   speed += 0.0008;
 
@@ -146,3 +146,4 @@ function drawGameOver() {
 }
 
 drawGameOver();
+
