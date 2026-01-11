@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    color:white;
+}
+
+canvas {
+    background-color: white;
+    border: 2px solid black;
+    margin-top:10px;
+}

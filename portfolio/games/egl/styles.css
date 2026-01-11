@@ -1,0 +1,415 @@
+:root {
+  --pastel-blue: #BFECFF;
+  --pastel-lavender: #CDC1FF;
+  --pastel-cream: #FFF6E3;
+  --pastel-pink: #FFCCEA;
+  --text-dark: #4A3C6E;
+}
+
+body {
+  background-color: var(--pastel-cream);
+  background-image: radial-gradient(circle at 20% 50%,
+      var(--pastel-blue) 0%,
+      var(--pastel-lavender) 30%,
+      var(--pastel-pink) 60%,
+      var(--pastel-cream) 90%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Quicksand', 'Arial Rounded MT', sans-serif;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  font-family: 'PixelEmulator', monospace;
+}
+
+@font-face {
+  font-family: 'PixelEmulator';
+  src: url('fonts/PixelEmulator.woff2') format('woff2');
+}
+
+.game-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.doll-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.doll-viewer {
+  position: relative;
+  width: 400px;
+  height: 700px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.doll-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.control-btn {
+  background-color: var(--pastel-lavender);
+  color: var(--text-dark);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-btn:hover {
+  background-color: var(--pastel-pink);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.control-btn:active {
+  transform: translateY(0);
+}
+
+.save-btn {
+  background-color: var(--pastel-pink);
+  color: white;
+  padding: 12px 25px;
+  margin-top: 20px;
+}
+
+#hairback,
+#girl,
+#dress,
+#shoes,
+#hair,
+#face,
+#hat,
+.dress0,
+.dress1,
+.dress2,
+.dress3,
+.dress4,
+.dress5,
+.dress6,
+.dress7,
+.shoes1,
+.shoes2,
+.shoes3,
+.hat1,
+.hat2,
+.hat3,
+.hat4,
+.hair0,
+.hair1,
+.hair2,
+.hair3,
+.hair4,
+.hair5,
+.face1,
+.face2 {
+  position: absolute;
+  height: 700px;
+  width: 400px;
+  background-repeat: no-repeat;
+}
+
+#girl {
+  z-index: 1;
+}
+
+#dress {
+  z-index: 6;
+}
+
+#shoes {
+  z-index: 2;
+}
+
+#hair {
+  z-index: 2;
+}
+
+#face {
+  z-index: 6;
+}
+
+#hat1,
+#hat2 {
+  z-index: 6;
+}
+
+.dress0,
+.dress1,
+.dress2,
+.dress3,
+.dress4,
+.dress5,
+.dress6,
+.dress7 {
+  z-index: 4;
+}
+
+#girl {
+  background-image: url("images/1.png");
+}
+
+.dress1 {
+  background-image: url("images/dress1.png");
+}
+
+.dress2 {
+  background-image: url("images/dress2.png");
+}
+
+.dress3 {
+  background-image: url("images/dress3.png");
+}
+
+.dress4 {
+  background-image: url("images/dress4.png");
+}
+
+.dress5 {
+  background-image: url("images/dress5.png");
+}
+
+.shoes1 {
+  background-image: url("images/shoes1.png");
+}
+
+.shoes2 {
+  background-image: url("images/shoes2.png");
+}
+
+.shoes3 {
+  background-image: url("images/shoes3.png");
+}
+
+.hat1 {
+  background-image: url("images/hat1.png");
+}
+
+.hat2 {
+  background-image: url("images/hat2.png");
+}
+
+.hat3 {
+  background-image: url("images/hat3.png");
+}
+
+.hat4 {
+  background-image: url("images/hat4.png");
+}
+
+.hat5 {
+  background-image: url("images/hat5.png");
+}
+
+.hat6 {
+  background-image: url("images/hat6.png");
+}
+
+.hair1 {
+  background-image: url("images/hair1.png");
+}
+
+.hair2 {
+  background-image: url("images/hair2.png");
+}
+
+.face1 {
+  background-image: url("images/face1.png");
+}
+
+.face2 {
+  background-image: url("images/face2.png");
+}
+
+.face3 {
+  background-image: url("images/face3.png");
+}
+
+.face4 {
+  background-image: url("images/face4.png");
+}
+
+
+.buttonBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: rgba(243, 240, 255, 0.8);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem auto;
+  position: relative;
+}
+
+button {
+  color: black;
+  background-color: var(--pastel-lavender);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.4em;
+}
+
+button:hover {
+  background-color: var(--pastel-pink);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .doll-viewer {
+    width: 300px;
+    height: 525px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #backdrop {
+    width: 300px;
+    height: 525px;
+  }
+
+  .buttonBox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #heading {
+    font-size: 2rem;
+  }
+
+  #hairback,
+  #girl,
+  #dress,
+  #shoes,
+  #hair,
+  #face,
+  #hat,
+  .dress0,
+  .dress1,
+  .dress2,
+  .dress3,
+  .dress4,
+  .dress5,
+  .dress6,
+  .dress7,
+  .shoes1,
+  .shoes2,
+  .shoes3,
+  .hat1,
+  .hat2,
+  .hat3,
+  .hat4,
+  .hair0,
+  .hair1,
+  .hair2,
+  .hair3,
+  .hair4,
+  .hair5,
+  .face1,
+  .face2 {
+    width: 300px;
+    height: 525px;
+  }
+}
+
+.tommy {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border-radius: 10px;
+}
+#tarot-container {
+  margin-top: 20px;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#tarot-container.tarot-hidden {
+  
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+#tarot-image {
+  border-radius: 12px;
+}
+
+#tarot-message {
+  font-family: 'Cursive', fantasy;
+  color: #6b4c9a;
+  font-size: 1.2em;
+}
+
+.tarot-button {
+  margin-top: 5px;
+  font-family: 'Cursive', fantasy;
+  background: pink;
+  border: 2px solid #aa66cc;
+  border-radius: 8px;
+  cursor: pointer;
+}

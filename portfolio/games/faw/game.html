@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angels vs Devils</title>
+    <link rel="stylesheet" href="avd.css">
+</head>
+
+<body>
+    <div class="menu" id="menu">
+        <button onclick="showLevelSelect()">Start</button>
+        <button onclick="showInstructions()">Instructions</button>
+        <div id="shop">
+            <p>Diamonds: <span id="diamond-count">0</span></p>
+            <button onclick="openShop()">Shop</button>
+            <div id="shop-window"
+                style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(0,0,0,0.9); padding:20px; border:2px solid white; z-index:1000; border-radius: 10px;">
+                <h2 style="color:white; text-align:center;">Shop</h2>
+                <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+                    <div class="shop-item" data-cost="10">
+                        <img src="assets/angel1.png" alt="angel" style="width:100px; height:100px;">
+                        <p style="color:white; text-align:center;">Angel Skin</p>
+
+                    </div>
+                    <div class="shop-item" data-cost="10">
+                        <img src="assets/devil1.png" alt="devil" style="width:100px; height:100px;">
+                        <p style="color:white; text-align:center;">Devil Skin</p>
+
+                    </div>
+                </div>
+                <button onclick="closeShop()"
+                    style="margin-top:20px; display:block; margin-left:auto; margin-right:auto;">Close</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="instructions" id="instructions" style="display:none">
+        <p>Use A/D to move Angel<br>Use ←/→ for Devil<br>W and ↑ to jump.<br> Use E to interact with levers.</p>
+        <p>The pink puddles hurt Devil, while the blue ones hurt Angel. Black mud hurts them both.</p>
+        <p>Press M to go to the Menu while in game.</p>
+        <p>Press ESCAPE to choose another level while in game.</p>
+        <p>Press R to reload.</p>
+
+        <button onclick="showMenu()">Back</button>
+    </div>
+
+    <div class="level-select" id="level-select" style="display:none">
+        <img src="assets/level1.webp" alt="Level 1" class="level-img" onclick="startGame(1)">
+        <img src="assets/level2.png" alt="Level 2" class="level-img" onclick="startGame(2)">
+        <button onclick="showMenu()">Back</button>
+    </div>
+    <div id="game-over-menu" style="display:none; position:fixed; top:0; left:0; 
+  width:100vw; height:100vh; background:rgba(0,0,0,0.7); color:white; 
+  font-family:sans-serif; flex-direction:column; justify-content:center; align-items:center; z-index:1000;">
+        <h1>Game Over</h1>
+        <button id="play-again-btn" style="margin:10px; padding:10px 20px;">Play Again</button>
+        <button id="custom-btn" style="margin:10px; padding:10px 20px;">Main menu</button>
+    </div>
+    <div id="game-won-menu" style="display:none; position:fixed; top:0; left:0; 
+  width:100vw; height:100vh; background:rgba(0,0,0,0.7); color:white; 
+  font-family:sans-serif; flex-direction:column; justify-content:center; align-items:center; z-index:1000;">
+        <h1>Level Complete!</h1>
+        <button id="menu-btn" style="margin:10px; padding:10px 20px;">Main Menu</button>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="avd.js">
+    </script>
+</body>
+
+</html>

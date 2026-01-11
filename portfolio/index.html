@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Game Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="film2.gif">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+    body { background: #f0f4f8; color: #333; display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 40px 20px; }
+
+    h1 { font-size: 3rem; margin-bottom: 40px; text-align: center; color: #111; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; width: 100%; max-width: 1200px; }
+
+    .card {
+      padding: 30px 20px;
+      border-radius: 15px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+    }
+
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .card { font-size: 1rem; padding: 20px 15px; }
+    }
+   .container {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+ 
+ 
+.image {
+  display: block;
+  border: 3px double #000;
+  width: 900px; 
+  height: auto;
+}
+
+ 
+.overlay { /*the menu part */
+position: absolute;
+bottom: 100%;
+left: 0;
+right: 0;
+overflow: hidden;
+width: 100%;
+height:0;
+transition: .5s ease;
+margin: auto;
+}
+ 
+.container:hover .overlay { 
+bottom: 84%;
+height: 16%;
+}
+div.scrollmenu {
+  background-color: #fff;
+  opacity: 0.7;
+
+  display: flex;
+  flex-wrap: wrap;          
+  justify-content: center;  
+
+  overflow-y: auto;        
+  overflow-x: hidden;
+}
+
+ 
+div.scrollmenu a { 
+text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000, 0 0;
+font-size:95%;
+font-family: ms-sans-serif;
+font-weight: normal;
+display: inline-block;
+color: white;
+text-align: left;
+text-decoration: none;
+padding: 8px 12px;
+margin: 4px;
+}
+ 
+
+div.scrollmenu a:hover {
+background-color: #000;
+opacity:0.3;
+ 
+}
+
+ 
+.text {
+color: white;
+font-size: 20px;
+position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+text-align: center;
+}
+.btn {
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey,
+    inset 2px 0px #dfdfdf;
+  border-radius: 0px;
+  background: #c9c9c9;
+  display: inline-block;
+  width: auto;
+  text-decoration: none;
+  padding: 5px;
+  line-height: 1;
+   font-family: ms-sans-serif;
+}
+
+  @font-face {
+  font-family: ms-sans-serif;
+  src: url(https://dl.dropbox.com/s/ngpec1t1x4ceksb/ms-sans-serif.ttf);
+}
+  </style>
+</head>
+<body>
+  <h1 class="btn" >My Game Portfolio</h1>
+  <p>Enjoy playing these games I've coded throughout the years in HTML, CSS, JS. (please hover over the image!)</p>
+<br>
+ 
+<div class="container">
+  <img src="https://i2.wp.com/dianaurban.com/wp-content/uploads/2017/07/01-cat-stretching-feet.gif?resize=500%2C399&ssl=1"
+       alt="Avatar"
+       class="image">
+
+  <div class="overlay">
+    <div class="scrollmenu" id="gamesMenu">
+    </div>
+  </div>
+</div>
+<p>style resources from https://scripted.neocities.org</p>
+ <script>
+const games = [
+  { name: "Calculator", url: "./games/calculator/calcu.html" },
+  { name: "Drawing App", url: "./games/drawing_app/drawing.html" },
+  { name: "Galaga", url: "./games/galaga/galaga.html" },
+  { name: "Snake", url: "./games/snake/snake.html" },
+  { name: "Tetris", url: "./games/tetris/tetris.html" },
+  { name: "Rock, Paper, Scissors", url: "./games/rock/rps.html" },
+  { name: "Pong", url: "./games/pong/pong.html" },
+  { name: "WhackAMole", url: "./games/whack/whack.html" },
+  { name: "Binding of Isaac", url: "./games/boi/boi.html" },
+  { name: "Endless Runner", url: "./games/turbopug/runner.html" },
+  { name: "Fire and Water ( Infoeducatie - Mention Winner )", url: "./games/faw/game.html" },
+  { name: "EGL Dress-UP ( Erasmus Final Project )", url: "./games/egl/egl.html" }
+];
+
+const menu = document.getElementById("gamesMenu");
+
+games.forEach(game => {
+  const link = document.createElement("a");
+  link.href = game.url;
+  link.textContent = game.name;
+  link.target = "_blank";
+  menu.appendChild(link);
+});
+</script>
+
+</body>
+</html>

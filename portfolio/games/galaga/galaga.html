@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Galaga: shift to dash!</title>
+    <style>
+       
+        #restartBtn {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 60%;
+            padding: 10px 20px;
+            font-size: 16px;
+            display: none;
+            background-color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="galaga.css">
+</head>
+<body>
+    <canvas id="gameCanvas" width="480" height="640"></canvas>
+    <button id="restartBtn">Restart</button>
+    <script src="gal.js"></script>
+</body>
+</html>

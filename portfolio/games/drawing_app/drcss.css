@@ -1,0 +1,15 @@
+body {
+    text-align:center;
+    background-color: rgb(255, 255, 255);
+}
+canvas {
+    border:2px;
+    background-color: aliceblue;
+    cursor: crosshair;
+    display: black;
+    margin:20px auto;
+}
+table {
+    text-align:center;
+    border: 10px;
+}

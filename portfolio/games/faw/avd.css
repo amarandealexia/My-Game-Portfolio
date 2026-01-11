@@ -1,0 +1,92 @@
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ 
+ }
+
+ html,
+ body {
+   width: 100%;
+   height: 100%;
+   background-color: #333;
+   font-family: 'Comic Sans MS', cursive, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   overflow: hidden;
+ }
+
+ canvas {
+   border: 2px solid white;
+   max-width: 100%;
+   max-height: 100%;
+ }
+canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+ .menu,
+ .level-select,
+ .instructions {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+   background-color: rgba(255, 255, 255, 0.1);
+   padding: 40px;
+   border-radius: 15px;
+   color: white;
+ }
+
+ button {
+   font-size: 20px;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 10px;
+   background-color: #555;
+   color: white;
+   cursor: pointer;
+   transition: background-color 0.3s;
+ }
+
+ button:hover {
+   background-color: #777;
+ }
+
+ .level-img {
+   width: 150px;
+   cursor: pointer;
+   transition: transform 0.2s;
+   float: left;
+ }
+
+ .level-img:hover {
+   transform: scale(1.1);
+ }
+
+ .shop-item {
+   cursor: pointer;
+   transition: transform 0.2s;
+ }
+
+ .shop-item:hover {
+   transform: scale(1.05);
+ }
+
+ #shop-window {
+   max-width: 80vw;
+   max-height: 80vh;
+   overflow-y: auto;
+ }
+ .shop-item button {
+  display: block;
+  margin: 10px auto;
+  padding: 5px 10px;
+}

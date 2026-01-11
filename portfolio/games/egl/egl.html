@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lolita Fashion Dress-up</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="game-container">
+    <div style="margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;">
+      <!-- add randomized prompts : classic lolita, tea party, all blue, sweet lolita, goth lolita -->
+      <h3 id="h3">Choose a theme</h3>
+      <button onclick="themes()" style="margin-left: auto; margin-right: auto;">Randomize!</button>
+    </div>
+    <h1>Lolita Fashion Dress-up</h1>
+
+    <div class="doll-container">
+      <div class="doll-viewer">
+        <div id="face" class="doll-layer"></div>
+        <div id="hair" class="doll-layer"></div>
+        <div id="girl" class="doll-layer"></div>
+        <div id="shoes" class="doll-layer"></div>
+        <div id="dress" class="doll-layer"></div>
+        <div id="hat1" class="doll-layer"></div>
+        <div id="hat2" class="doll-layer"></div>
+
+      </div>
+
+      <div class="controls">
+        <button class="control-btn" id="nexthair" onclick="nexthair()">
+          <span>💇</span> Change Hair
+        </button>
+        <button class="control-btn" id="nextdress" onclick="nextdress()">
+          <span>👗</span> Change Dress
+        </button>
+        <button class="control-btn" id="nextshoes" onclick="nextshoes()">
+          <span>👠</span> Change Shoes
+        </button>
+        <button class="control-btn" id="nexthat1" onclick="nexthat1()">
+          <span>🎀</span> Change Accessory 1
+        </button>
+        <button class="control-btn" id="nexthat2" onclick="nexthat2()">
+          <span>🎀</span> Change Accessory 2
+        </button>
+        <button class="control-btn" id="nextface" onclick="nextface()">
+          <span>👓</span> Change Face
+        </button>
+        <button class="control-btn" onclick="randomizeOutfit()">
+          <span>🎲</span> Random Outfit
+        </button>
+        <button class="control-btn save-btn" onclick="saveOutfit()">
+          <span>💾</span> Save Outfit
+        </button>
+        <button class="control-btn" onclick="resetOutfit()">
+          <span>🔄</span> Reset Outfit
+        </button>
+        <div class="buttonBox">
+          <img class="tommy" src="f6.jpg">
+          <img class="tommy" src="tommy.jpg">
+          <img class="tommy" src="to.jpg">
+          <img class="tommy" src="tf6.jpg">
+          <h4 style="text-align: center; color:hotpink">Lonely in Gorgeous .° ༘🎧⋆🖇₊˚ෆ</h4>
+        </div>
+      </div>
+      <div class="slot-controls" style="margin-left: auto; margin-right: auto;">
+        <button onclick="saveSlot(1)" style="float: left;">💾 Save Slot 1</button>
+        <button onclick="loadSlot(1)" style="float: left;">📂 Load Slot 1</button>
+        <button onclick="saveSlot(2)" style="float: left;">💾 Save Slot 2</button>
+        <button onclick="loadSlot(2)" style="float: left;">📂 Load Slot 2</button>
+      </div>
+       <div id="tarot-container" class="tarot-hidden">
+    <img id="tarot-image" src="tarotheader.jpg" alt="Tarot Card" width="920px" height="auto">
+    <p id="tarot-message" style="padding: 50px;"></p>
+  </div>
+  <button onclick="drawTarot()">Draw a Tarot Card 🔮</button>
+    </div>
+    <!-- kill me -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+<!-- ⠀⠀
+ ⠀⢠⡾⠲⠶⣤⣀⣠⣤⣤⣤⡿⠛⠿⡴⠾⠛⢻⡆⠀⠀⠀
+⠀⠀⠀⣼⠁⠀⠀⠀⠉⠁⠀⢀⣿⠐⡿⣿⠿⣶⣤⣤⣷⡀⠀⠀
+⠀⠀⠀⢹⡶⠀⠀⠀⠀⠀⠀⠈⢯⣡⣿⣿⣀⣸⣿⣦⢓⡟⠀⠀
+⠀⠀⢀⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠹⣍⣭⣾⠁⠀⠀
+⠀⣀⣸⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣸⣷⣤⡀
+⠈⠉⠹⣏⡁⠀⢸⣿⠀⠀⠀⢀⡀⠀⠀⠀⣿⠆⠀⢀⣸⣇⣀⠀
+⠀⠐⠋⢻⣅⣄⢀⣀⣀⡀⠀⠯⠽⠂⢀⣀⣀⡀⠀⣤⣿⠀⠉⠀
+⠀⠀⠴⠛⠙⣳⠋⠉⠉⠙⣆⠀⠀⢰⡟⠉⠈⠙⢷⠟⠉⠙⠂⠀
+⠀⠀⠀⠀⠀⢻⣄⣠⣤⣴⠟⠛⠛⠛⢧⣤⣤⣀⡾ -->
+
+</html>
