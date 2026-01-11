@@ -194,6 +194,25 @@ h1 {
   background-image: url("images/1.png");
 }
 
+.dress1 {
+  background-image: url("images/dress1.png");
+}
+
+.dress2 {
+  background-image: url("images/dress2.png");
+}
+
+.dress3 {
+  background-image: url("images/dress3.png");
+}
+
+.dress4 {
+  background-image: url("images/dress4.png");
+}
+
+.dress5 {
+  background-image: url("images/dress5.png");
+}
 
 .shoes1 {
   background-image: url("images/shoes1.png");
@@ -394,4 +413,5 @@ button:active {
   border-radius: 8px;
   cursor: pointer;
 }
+
 
