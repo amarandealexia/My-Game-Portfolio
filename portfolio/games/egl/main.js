@@ -213,7 +213,7 @@ document.querySelectorAll('.buttonBox').forEach((img, index) => {
     secretBtn.classList.add('secret-hat-btn');
 
     secretBtn.addEventListener('click', () => {
-      document.getElementById('hat2').style.backgroundImage = 'url("images/hat7.png")';
+      document.getElementById('hat2').style.backgroundImage = 'url("https://i.imgur.com/3qUMmoc.png")';
     });
 
     img.insertAdjacentElement('afterend', secretBtn);
@@ -268,3 +268,4 @@ function drawTarot() {
   image.src = card.img;
   message.textContent = card.message;
 }
+
