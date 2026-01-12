@@ -195,7 +195,7 @@ h1 {
 }
 
 .dress1 {
-  background-image: url("images/dress1.png");
+  background-image: url("https://i.imgur.com/vF5MJdd.png");
 }
 
 .dress2 {
@@ -413,5 +413,6 @@ button:active {
   border-radius: 8px;
   cursor: pointer;
 }
+
 
 
